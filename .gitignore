@@ -1,10 +1,3 @@
-# Created by https://www.gitignore.io/api/codekit
-
-# General CodeKit files to ignore
-prepros-6.config
-/min
-
-*/codekit-config.json
-.codekit-cache
-
-# End of https://www.gitignore.io/api/codekit
+*.sass
+*.scss
+*.jade
