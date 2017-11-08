@@ -1,0 +1,12 @@
+# Created by https://www.gitignore.io/api/codekit
+
+### CodeKit ###
+# General CodeKit files to ignore
+prepros-6.config
+/min
+
+### CodeKit Patch ###
+*/codekit-config.json
+.codekit-cache
+
+# End of https://www.gitignore.io/api/codekit
