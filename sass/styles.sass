@@ -1,0 +1,20 @@
+=tran
+     transition: 70ms all ease-in-out
+
+body
+     font-family: 'Montserrat', sans-serif
+     margin: 0
+
+a
+     font-weight: 800
+     color: #000
+     text-decoration: none
+     +tran
+     &:hover
+          color: #555555
+
+.container
+     max-width: 1200px
+     margin: 0 auto
+
+@import "modules/nav"

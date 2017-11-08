@@ -4,7 +4,7 @@
 config.codekit
 config.codekit3
 *.sass
-*.scss
+sass/**/*.scss
 *.jade
 /min
 

@@ -1,0 +1,43 @@
+nav#sitenav.desktop.top
+     #searchbox
+          form(action="" method="")
+               input(type="text" placeholder="Szukaj...")
+               button(type="submit" name="search"): i.fa.fa-search
+          button#searchboxclose: i.fa.fa-close
+          
+     .container#undersearchbox
+          ul.links
+               li
+                    a(href="") Timeline
+               li
+                    a(href="") Profil
+               li
+                    a(href="") Wiadomosci
+          a.logo
+               img(src="http://www.kubamilcarz.pl/onair/assets/img/favicon.png")
+               
+          ul.links
+               li
+                    a(href=""): i.fa.fa-feed
+               li
+                    a(href=""): i.fa.fa-bell
+               li#tooglesearchbox
+                    a(href=""): i.fa.fa-search
+               li
+                    a(href=""): i.fa.fa-user
+
+nav#sitenav.mobile.top(style="display: none;")
+     #searchbox
+          form(action="" method="")
+               input(type="text" placeholder="Szukaj...")
+               button(type="submit" name="search"): i.fa.fa-search
+          button#searchboxclose: i.fa.fa-close
+          
+     .container#undersearchbox
+          button#toogleLeftSideNav
+               img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+          
+          .logo
+               img(src="http://www.kubamilcarz.pl/onair/assets/img/favicon.png")
+          
+          button#toogleNewPost: i.fa.fa-leaf
