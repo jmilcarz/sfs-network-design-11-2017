@@ -88,18 +88,181 @@ nav#sitenav.desktop.top
                li.last
                     a(href=""): i.fa.fa-user
 
-nav#sitenav.mobile.top(style="display: none;")
-     //- #searchbox.mobile
-     //-      form(action="" method="")
-     //-           input(type="text" placeholder="Szukaj...")
-     //-           button(type="submit" name="search"): i.fa.fa-search
-     //-      button#searchboxclose: i.fa.fa-close
-          
-     .container#undersearchbox
+nav#sitenav.mobile.top
+     #searchbox-mobile
+          .container
+               .form
+                    input(type="text" placeholder="Szukaj...")
+                    button(type="submit" name="search"): i.fa.fa-search
+               button#searchboxclose-mobile: i.fa.fa-close
+          #searchresults-mobile
+               a.btn(href="") Pokaż wyniki na oddzielnej stronie
+               .grid
+                    .user
+                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+                         .about
+                              h2.name Jakub Milcarz
+                              .info
+                                   a.btn.btn-follow(href="")
+                                        i.fa.fa-leaf
+                                        | Obserwuj
+                                   a.btn.btn-send-message(href="")
+                                        i.fa.fa-comment
+                                        | Wyślij wiadomość
+                    
+                    .user
+                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+                         .about
+                              h2.name Jakub Milcarz
+                              .info
+                                   a.btn.btn-follow(href="")
+                                        i.fa.fa-leaf
+                                        | Obserwuj
+                                   a.btn.btn-send-message(href="")
+                                        i.fa.fa-comment
+                                        | Wyślij wiadomość
+                                   
+                    .user
+                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+                         .about
+                              h2.name Jakub Milcarz
+                              .info
+                                   a.btn.btn-follow(href="")
+                                        i.fa.fa-leaf
+                                        | Obserwuj
+                                   a.btn.btn-send-message(href="")
+                                        i.fa.fa-comment
+                                        | Wyślij wiadomość
+                                        
+                    .user
+                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+                         .about
+                              h2.name Jakub Milcarz
+                              .info
+                                   a.btn.btn-stop-follow(href="")
+                                        | Przestań Obserwować
+                                   a.btn.btn-send-message(href="")
+                                        i.fa.fa-comment
+                                        | Wyślij wiadomość     
+
+                    .user
+                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+                         .about
+                              h2.name Jakub Milcarz
+                              .info
+                                   a.btn.btn-follow(href="")
+                                        i.fa.fa-leaf
+                                        | Obserwuj
+                                   a.btn.btn-send-message(href="")
+                                        i.fa.fa-comment
+                                        | Wyślij wiadomość  
+                    .user
+                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+                         .about
+                              h2.name Jakub Milcarz
+                              .info
+                                   a.btn.btn-follow(href="")
+                                        i.fa.fa-leaf
+                                        | Obserwuj
+                                   a.btn.btn-send-message(href="")
+                                        i.fa.fa-comment
+                                        | Wyślij wiadomość  
+                    .user
+                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+                         .about
+                              h2.name Jakub Milcarz
+                              .info
+                                   a.btn.btn-follow(href="")
+                                        i.fa.fa-leaf
+                                        | Obserwuj
+                                   a.btn.btn-send-message(href="")
+                                        i.fa.fa-comment
+                                        | Wyślij wiadomość  
+                    .user
+                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+                         .about
+                              h2.name Jakub Milcarz
+                              .info
+                                   a.btn.btn-follow(href="")
+                                        i.fa.fa-leaf
+                                        | Obserwuj
+                                   a.btn.btn-send-message(href="")
+                                        i.fa.fa-comment
+                                        | Wyślij wiadomość  
+
+     .container#undersearchbox-mobile
           button#toogleLeftSideNav
                img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
           
           .logo
-               img(src="http://www.kubamilcarz.pl/onair/assets/img/favicon.png")
+               img(src="img/logo.png")
           
-          button#toogleNewPost: i.fa.fa-leaf
+          button#toogleMobileNewPost: i.fa.fa-leaf
+
+     #mobileNewPostModal
+          header
+               a(href=""): img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+               h1 Nowy Post
+               button#closeMobileNewPost
+                    | anuluj
+                    i.fa.fa-close
+          
+          form(action="" method="post")
+               textarea(name="postbody" placeholder="Napisz coś...")
+               input(type="file" name="postImg")
+               button(type="submit").btn
+                    i.fa.fa-bolt
+                    | wyślij
+
+nav#sitenav.mobile.bottom
+     .container
+          a(href=""): i.fa.fa-feed
+          a#tooglesearchbox-mobile: i.fa.fa-search
+          a(href=""): i.fa.fa-bell
+          a(href=""): i.fa.fa-comments
+          
+
+nav#sitenav.mobile.left
+     .container
+          header
+               a(href=""): img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+               button#closeMobileLeftNav: i.fa.fa-close
+          
+          .info 
+               h1 Jakub Milcarz
+               h2 @jmilcarz
+          
+          ul.links
+               li
+                    a(href="")
+                         i.fa.fa-feed
+                         | Timeline
+               li
+                    a(href="")
+                         i.fa.fa-user-circle-o
+                         | Profil
+               li
+                    a#tooglesearchbox-mobile2
+                         i.fa.fa-search
+                         | Szukaj
+               li
+                    a(href="")
+                         i.fa.fa-bolt
+                         | Popularne
+          
+          ul.links
+               li
+                    a(href="")
+                         i.fa.fa-cogs
+                         | Ustawienia i Prywatność
+               li
+                    a(href="")
+                         i.fa.fa-question-circle
+                         | Centrum Pomocy
+               li
+                    a(href="")
+                         i.fa.fa-sign-out
+                         | Wyloguj się
+               
+          .form
+               button#toogleDarkTheme: i.fa.fa-lightbulb-o
