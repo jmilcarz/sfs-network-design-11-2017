@@ -1,6 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0; }
+  margin: 0;
+  overflow: hidden; }
 
 a {
   font-weight: 600;
@@ -11,6 +12,49 @@ a {
   transition: 70ms all ease-in-out; }
   a:hover {
     color: #555555; }
+
+.btn {
+  padding: 5px 8px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  background: #fff;
+  -webkit-transition: 70ms all ease-in-out;
+  -o-transition: 70ms all ease-in-out;
+  transition: 70ms all ease-in-out; }
+  .btn:hover {
+    cursor: pointer;
+    border-color: #00B519;
+    color: #000;
+    background: #f9f9f9; }
+
+.btn-follow {
+  background: #00B519;
+  color: #fff;
+  border-color: #ecebec; }
+  .btn-follow:hover {
+    color: #fff;
+    background: #009c15; }
+
+.btn-stop-follow {
+  background: #ee4848;
+  color: #fff;
+  border-color: #ecebec; }
+  .btn-stop-follow:hover {
+    border-color: #ee4848;
+    color: #fff;
+    background: #eb2323; }
+
+.btn-send-message {
+  background: #fff;
+  color: #000;
+  border-color: #619cff; }
+  .btn-send-message:hover {
+    color: #619cff;
+    background: #fff;
+    border-color: #619cff; }
 
 .container {
   max-width: 1200px;
@@ -32,8 +76,10 @@ nav#sitenav {
     height: 50px;
     z-index: 100; }
     nav#sitenav #searchbox #searchresults {
-      min-height: 50px;
-      background: red;
+      background: #fff;
+      border: 3px solid #ecebec;
+      max-height: 500px;
+      overflow: scroll;
       display: none;
       position: absolute;
       top: 50px;
@@ -42,7 +88,58 @@ nav#sitenav {
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       max-width: 650px;
-      width: 100%; }
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 10px 25px 25px 25px; }
+      nav#sitenav #searchbox #searchresults .grid {
+        padding-top: 25px;
+        display: grid;
+        grid-template-rows: auto;
+        grid-gap: 25px; }
+        nav#sitenav #searchbox #searchresults .grid .user {
+          height: 80px;
+          display: grid;
+          grid-template-columns: 80px 1fr;
+          grid-gap: 10px; }
+          nav#sitenav #searchbox #searchresults .grid .user img {
+            height: 100%;
+            border-radius: 50%; }
+          nav#sitenav #searchbox #searchresults .grid .user .about {
+            max-width: 400px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column; }
+            nav#sitenav #searchbox #searchresults .grid .user .about h2.name {
+              margin: 0;
+              font-size: 24px;
+              font-weight: 300; }
+            nav#sitenav #searchbox #searchresults .grid .user .about .info {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 15px; }
+              nav#sitenav #searchbox #searchresults .grid .user .about .info .btn {
+                font-size: 15px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center; }
+                nav#sitenav #searchbox #searchresults .grid .user .about .info .btn i {
+                  margin-right: 5px; }
     nav#sitenav #searchbox .container {
       display: -webkit-box;
       display: -webkit-flex;

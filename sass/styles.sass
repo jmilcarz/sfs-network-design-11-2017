@@ -2,10 +2,13 @@
      transition: 70ms all ease-in-out
 
 $color: #00B519
+$scolor: #619cff
+$tcolor: #ee4848
 
 body
      font-family: 'Montserrat', sans-serif
      margin: 0
+     overflow: hidden
 
 a
      font-weight: 600
@@ -14,6 +17,47 @@ a
      +tran
      &:hover
           color: #555555
+
+.btn
+     padding: 5px 8px
+     border: 1px solid #000
+     border-radius: 3px
+     display: block
+     text-align: center
+     font-weight: 500
+     background: #fff
+     +tran
+     &:hover
+          cursor: pointer
+          border-color: $color
+          color: #000
+          background: #f9f9f9
+
+.btn-follow
+     background: $color
+     color: #fff
+     border-color: #ecebec
+     &:hover
+          color: #fff
+          background: darken($color, 5%)
+
+.btn-stop-follow
+     background: $tcolor
+     color: #fff
+     border-color: #ecebec
+     &:hover
+          border-color: $tcolor
+          color: #fff
+          background: darken($tcolor, 8%)
+
+.btn-send-message
+     background: #fff
+     color: #000
+     border-color: $scolor
+     &:hover
+          color: $scolor
+          background: #fff
+          border-color: $scolor
 
 .container
      max-width: 1200px

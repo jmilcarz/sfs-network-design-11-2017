@@ -15,8 +15,10 @@ nav#sitenav
           height: 50px
           z-index: 100
           #searchresults
-               min-height: 50px
-               background: red
+               background: #fff
+               border: 3px solid #ecebec
+               max-height: 500px
+               overflow: scroll
                display: none
                position: absolute
                top: 50px
@@ -24,6 +26,42 @@ nav#sitenav
                transform: translateX(-50%)
                max-width: 650px
                width: 100%
+               box-sizing: border-box
+               padding: 10px 25px 25px 25px
+               .grid
+                    padding-top: 25px
+                    display: grid
+                    grid-template-rows: auto
+                    grid-gap: 25px
+                    .user
+                         height: 80px
+                         display: grid
+                         grid-template-columns: 80px 1fr
+                         grid-gap: 10px
+                         img
+                              height: 100%
+                              border-radius: 50%
+                         .about
+                              max-width: 400px
+                              display: flex
+                              justify-content: center
+                              flex-direction: column
+                              h2.name
+                                   margin: 0
+                                   font-size: 24px
+                                   font-weight: 300
+                              .info
+                                   // background: pink
+                                   display: grid
+                                   grid-template-columns: repeat(2, 1fr)
+                                   grid-gap: 15px
+                                   .btn
+                                        font-size: 15px
+                                        display: flex
+                                        justify-content: center
+                                        i
+                                             margin-right: 5px
+
           .container
                display: flex
                justify-content: space-between
