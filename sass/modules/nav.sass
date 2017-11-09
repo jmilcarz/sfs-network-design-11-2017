@@ -1,5 +1,112 @@
 nav#sitenav
      background: #fff
      height: 50px
-     img
-          width: 50px
+     z-index: 10000
+     &.desktop.top
+          border-bottom: 3px solid #ecebec
+
+     #searchbox
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          display: none
+          background: rgba($color, 0.9)
+          height: 50px
+          z-index: 100
+          #searchresults
+               min-height: 50px
+               background: red
+               display: none
+               position: absolute
+               top: 50px
+               left: 50%
+               transform: translateX(-50%)
+               max-width: 650px
+               width: 100%
+          .container
+               display: flex
+               justify-content: space-between
+               align-items: center
+               height: 50px
+               .form
+                    display: flex
+                    position: absolute
+                    top: 10px
+                    left: 50%
+                    max-width: 650px
+                    width: 100%
+                    transform: translateX(-50%)
+                    justify-content: center
+                    input
+                         height: 32px
+                         margin: 0
+                         background: #ecebec
+                         border: none
+                         box-sizing: border-box
+                         padding: 0 5px
+                         width: 100%
+                         outline: none
+                         font-size: 17px
+                         +tran
+                         &::placeholder
+                              color: #cdc9cd
+                              font-size: 15px
+                    button
+                         outline: none
+                         height: 32px
+                         margin: 0
+                         background: #ecebec
+                         border: none
+                         box-sizing: border-box
+                         padding: 0 5px
+                         width: 50px
+                         outline: none
+                         font-size: 17px
+                         +tran
+                         &:hover
+                              cursor: pointer
+               #searchboxclose
+                    outline: none
+                    height: 32px
+                    margin: 0
+                    background: none
+                    border: none
+                    box-sizing: border-box
+                    padding: 0
+                    outline: none
+                    font-size: 21px
+                    position: relative
+                    left: calc(100% - 15px)
+                    color: #fff
+                    &:hover
+                         cursor: pointer
+
+     #undersearchbox
+          display: flex
+          justify-content: space-between
+          align-items: center
+          height: 50px
+          ul.links
+               display: flex
+               padding: 0
+               margin: 0
+               list-style-type: none
+               li
+                    padding: 0 10px
+                    font-size: 16px
+                    &.first
+                         padding: 0 10px 0 0
+                    &.last
+                         padding: 0 0 0 10px
+
+          a.logo
+               position: absolute
+               top: 5px
+               left: 50%
+               transform: translateX(-50%)
+               z-index: 2
+               &:hover
+                    cursor: pointer
+               img
+                    height: 40px
