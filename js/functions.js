@@ -44,4 +44,14 @@ $(document).ready(function() {
                $("#searchbox-mobile").delay(500).css("display", "none");
           });
      });
+
+     // mobile left side nav
+
+     $("#toogleLeftSideNav").click(function() {
+          $("#sitenav.mobile.left").css("left", "0");
+     });
+
+     $("#closeMobileLeftNav").click(function() {
+          $("#sitenav.mobile.left").css("left", "-400px");
+     });
 });
