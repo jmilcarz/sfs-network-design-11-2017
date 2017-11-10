@@ -1084,8 +1084,11 @@ nav#sitenav.mobile.left {
         justify-content: space-around; }
         .grid#timeline .post.column .posts .post .row.stuff .likes > i {
           margin-right: 5px; }
-        .grid#timeline .post.column .posts .post .row.stuff .comments > i {
-          margin-right: 5px; }
+        .grid#timeline .post.column .posts .post .row.stuff .comments {
+          position: relative;
+          z-index: 10000; }
+          .grid#timeline .post.column .posts .post .row.stuff .comments > i {
+            margin-right: 5px; }
         .grid#timeline .post.column .posts .post .row.stuff .comments-modal {
           background: #fff;
           border: 3px solid var(--bordercolor);

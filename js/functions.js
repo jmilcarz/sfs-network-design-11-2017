@@ -100,9 +100,10 @@ $(document).ready(function() {
           commentBtns[i].onclick = function() {
                var comment = this.nextElementSibling;
                if (comment.style.display == "none") {
-                    $(comment)
+                    comment.style.display = "block";
                }else {
                     comment.style.display = "none";
+
                }
           }
      }
