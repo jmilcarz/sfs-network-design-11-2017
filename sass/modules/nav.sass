@@ -11,7 +11,7 @@ nav#sitenav
           left: 0
           width: 100%
           display: none
-          background: rgba($color, 0.9)
+          background: var(--color-rgba-09)
           height: 50px
           z-index: 100
           #searchresults
@@ -147,7 +147,7 @@ nav#sitenav
                h1
                     margin: 0
                     font-size: 28px
-                    color: $color
+                    color: var(--color)
 
      #nav-dropdown-user
           position: absolute
@@ -236,7 +236,7 @@ nav#sitenav
                left: 0
                width: 100%
                display: none
-               background: rgba($color, 0.9)
+               background: var(--color-rgba-09)
                height: 50px
                z-index: 100
                #searchresults-mobile
@@ -370,7 +370,7 @@ nav#sitenav
                     h1
                          margin: 0
                          font-size: 28px
-                         color: $color
+                         color: var(--color)
 
                button#toogleMobileNewPost
                     font-size: 28px
@@ -432,7 +432,7 @@ nav#sitenav
                          height: 200px
                          +tran
                          &:focus
-                              border-bottom: 1px solid $color
+                              border-bottom: 1px solid var(--color)
 
                     input
                          outline: none
@@ -492,7 +492,7 @@ nav#sitenav.mobile.left
      .info
           box-sizing: border-box
           padding: 10px
-          border-bottom: 1px solid #ecebec
+          border-bottom: 1px solid var(--bordercolor)
           h1, h2
                margin: 0
           h1

@@ -1,0 +1,49 @@
+.grid#timeline
+     display: grid
+     grid-template-columns: 280px 1fr 280px
+     grid-gap: 20px
+     .column
+          min-height: 50px
+          background: #fff
+
+     .info.column
+          .about
+               height: 160px
+               header
+                    img.grat-bg
+                         display: block
+                         height: 105px
+                         width: 100%
+                         border-bottom: 2px solid var(--bordercolor)
+                         object-fit: cover
+                    img.profile-img
+                         height: 80px
+                         width: 80px
+                         border-radius: 50%
+                         display: block
+                         margin: 0 auto
+                         transform: translateY(-40px)
+                         border: 2px solid var(--bordercolor)
+                         object-fit: cover
+
+               .box
+                    margin-top: -35px
+                    border-bottom: 1px solid var(--bordercolor)
+                    h1
+                         margin: 0
+                         text-align: center
+                         font-size: 24px
+                    h2
+                         margin: 0
+                         font-size: 19px
+                         font-weight: 300
+                         text-align: center
+
+          .you-can-like-it
+               > h1
+                    margin: 0
+                    text-align: center
+                    font-weight: 500
+                    font-size: 24px
+                    &.more-space
+                         margin-top: 70px

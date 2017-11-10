@@ -5,6 +5,8 @@ $color: #00B519
 $scolor: #619cff
 $tcolor: #ee4848
 
+@import "modules/vars.css"
+
 body
      font-family: 'Montserrat', sans-serif
      margin: 0
@@ -29,35 +31,35 @@ a
      +tran
      &:hover
           cursor: pointer
-          border-color: $color
+          border-color: var(--color)
           color: #000
           background: #f9f9f9
 
 .btn-follow
-     background: $color
+     background: var(--color)
      color: #fff
-     border-color: #ecebec
+     border-color: var(--bordercolor)
      &:hover
           color: #fff
-          background: darken($color, 5%)
+          background: var(--color-dark)
 
 .btn-stop-follow
-     background: $tcolor
+     background: var(--tcolor)
      color: #fff
-     border-color: #ecebec
+     border-color: var(--bordercolor)
      &:hover
-          border-color: $tcolor
+          border-color: var(--tcolor)
           color: #fff
-          background: darken($tcolor, 8%)
+          background: var(--tcolor-dark)
 
 .btn-send-message
      background: #fff
      color: #000
-     border-color: $scolor
+     border-color: var(--scolor)
      &:hover
-          color: $scolor
+          color: var(--scolor)
           background: #fff
-          border-color: $scolor
+          border-color: var(--scolor)
 
 .container
      max-width: 1200px
@@ -69,6 +71,10 @@ a
      height: calc(100vh - 50px)
      background: #f0f0f0
      overflow: scroll
+
+#main-container > .container
+     max-width: 1200px
+     margin: 0 auto
 
 @import "modules/nav"
 @import "modules/timeline"
