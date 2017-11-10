@@ -100,11 +100,19 @@ $(document).ready(function() {
           commentBtns[i].onclick = function() {
                var comment = this.nextElementSibling;
                if (comment.style.display == "none") {
-                    comment.style.display = "block";
+                    comment.classList.toggle("show");
                }else {
-                    comment.style.display = "none";
-
+                    comment.classList.toggle("show");
                }
           }
      }
+
+     $("#commentscloser1").click(function() {
+          $("#commentscloser1").parent().parent().removeClass("show");
+     });
+
+     $("#commentscloser2").click(function() {
+          $("#commentscloser2").parent().parent().removeClass("show");
+     });
+
 });
