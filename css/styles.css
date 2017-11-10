@@ -1,4 +1,13 @@
-@import url(modules/vars.css);
+:root {
+  --bordercolor: #ecebec;
+  --color: #00B519;
+  --color-dark: #0b991e;
+  --color-rgba-09: rgba(0, 181, 25, 0.9);
+  --scolor: #619cff;
+  --scolor-dark: #4181ec;
+  --tcolor: #ee4848;
+  --tcolor-dark: #eb3030; }
+
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -787,6 +796,7 @@ nav#sitenav.mobile.left {
       object-fit: cover; }
     .grid#timeline .info.column .about .box {
       margin-top: -35px;
+      padding-bottom: 10px;
       border-bottom: 1px solid var(--bordercolor); }
       .grid#timeline .info.column .about .box h1 {
         margin: 0;
@@ -803,4 +813,38 @@ nav#sitenav.mobile.left {
     font-weight: 500;
     font-size: 24px; }
     .grid#timeline .info.column .you-can-like-it > h1.more-space {
-      margin-top: 70px; }
+      margin-top: 75px; }
+  .grid#timeline .info.column .you-can-like-it ul {
+    list-style-type: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 15px 0; }
+    .grid#timeline .info.column .you-can-like-it ul li {
+      padding: 0px 20px;
+      margin: 4.5px 0;
+      font-size: 17px; }
+      .grid#timeline .info.column .you-can-like-it ul li a {
+        font-weight: 400;
+        color: var(--color); }
+      .grid#timeline .info.column .you-can-like-it ul li .grid {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        grid-gap: 10px; }
+        .grid#timeline .info.column .you-can-like-it ul li .grid img {
+          width: 50px;
+          height: 50px;
+          -o-object-fit: cover;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 2px solid var(--bordercolor); }
+        .grid#timeline .info.column .you-can-like-it ul li .grid .info h1 {
+          margin: 0;
+          font-weight: 500;
+          font-size: 19px;
+          color: #000; }
+        .grid#timeline .info.column .you-can-like-it ul li .grid .info h2 {
+          margin: 0;
+          font-size: 17px;
+          font-weight: 300;
+          color: #000; }
