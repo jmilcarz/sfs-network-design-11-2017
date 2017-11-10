@@ -92,4 +92,18 @@ $(document).ready(function() {
      $("#newpostPostImg").change(function (){
           $("#newpostPostImg").hide();
      });
+
+     // comment modals
+
+     var commentBtns = document.getElementsByClassName("comments");
+     for (var i = 0; i < commentBtns.length; i++) {
+          commentBtns[i].onclick = function() {
+               var comment = this.nextElementSibling;
+               if (comment.style.display == "none") {
+                    $(comment)
+               }else {
+                    comment.style.display = "none";
+               }
+          }
+     }
 });
