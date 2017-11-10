@@ -61,6 +61,21 @@
                                         h2 @blaszczak
                                         
      .post.column
-     
+          header
+               button#newPostModalDesktop
+                    | Napisz coś ciekawego...
+                    i.fa.fa-leaf
+               .modal#newpostmodalddesktop.new-post
+                    header
+                         h1 Nowy Post
+                         button#closeNewPostModalDesktop
+                              | anuluj
+                              i.fa.fa-close
+                    .form
+                         textarea#newpostPostBody(name="postbody" placeholder="Napisz coś...")
+                         input#newpostPostImg(type="file" name="postimg")
+                         button#newpostPostSubmitBtn(type="submit", name="sendpost")
+                              i.fa.fa-leaf
+                              | Wyślij
      .other.column
      

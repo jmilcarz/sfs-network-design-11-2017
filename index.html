@@ -260,7 +260,22 @@
             </ul>
           </div>
         </div>
-        <div class="post column"></div>
+        <div class="post column">
+          <header>
+            <button id="newPostModalDesktop">Napisz coś ciekawego...<i class="fa fa-leaf"></i></button>
+            <div class="modal new-post" id="newpostmodalddesktop">
+              <header>
+                <h1>Nowy Post</h1>
+                <button id="closeNewPostModalDesktop">anuluj<i class="fa fa-close"></i></button>
+              </header>
+              <div class="form">
+                <textarea id="newpostPostBody" name="postbody" placeholder="Napisz coś..."></textarea>
+                <input id="newpostPostImg" type="file" name="postimg"/>
+                <button id="newpostPostSubmitBtn" type="submit" name="sendpost"><i class="fa fa-leaf"></i>Wyślij</button>
+              </div>
+            </div>
+          </header>
+        </div>
         <div class="other column"></div>
       </div>
     </div>
