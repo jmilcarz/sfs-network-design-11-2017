@@ -56,4 +56,11 @@ $(document).ready(function() {
           $("#searchresults-mobile").delay(350).slideDown(200);
      });
 
+     // dekstop nav user dropdown menu
+
+     $("#toogleUserNavDropdown").click(function() {
+          $("#nav-dropdown-user").slideToggle(250);
+     });
+
+
 });

@@ -286,7 +286,8 @@ nav#sitenav {
     border: 3px solid #ecebec;
     margin: 0;
     list-style-type: none;
-    padding: 0; }
+    padding: 0;
+    display: none; }
     @media screen and (max-width: 1624px) {
       nav#sitenav #nav-dropdown-user {
         -webkit-transform: translate(-120px, 15px);
