@@ -1,19 +1,16 @@
 $(document).ready(function() {
+
+     // dekstop searchbox
+
      $("#tooglesearchbox").click(function() {
-          $("#searchbox").slideToggle(180, function() {
-               $("#searchbox").css("display", "block");
-          });
+          $("#searchbox").slideDown(300);
+          $("#searchresults").delay(350).slideDown(200);
      });
 
      $("#searchboxclose").click(function() {
-          $("#searchbox").slideToggle(180, function() {
-               $("#searchbox").css("display", "none");
-          });
+          $("#searchbox").slideUp(300);
+          $("#searchresults").delay(350).slideUp(200);
      });
-
-     if ($("#searchboxfield").attr("val") != "") {
-          $("#searchresults").css("display", "block");
-     }
 
      // mobile new post modal
 
@@ -32,17 +29,13 @@ $(document).ready(function() {
      // mobile searchbox
 
      $("#tooglesearchbox-mobile").click(function() {
-          $("#searchbox-mobile").slideToggle(180, function() {
-               $("#searchresults-mobile").css("display", "block");
-               $("#searchbox-mobile").css("display", "block");
-          });
+          $("#searchbox-mobile").slideDown(300);
+          $("#searchresults-mobile").delay(350).slideDown(200);
      });
 
      $("#searchboxclose-mobile").click(function() {
-          $("#searchbox-mobile").slideToggle(800, function() {
-               $("#searchresults-mobile").css("display", "none");
-               $("#searchbox-mobile").delay(500).css("display", "none");
-          });
+          $("#searchresults-mobile").slideUp(800);
+          $("#searchbox-mobile").delay(800).slideUp(800);
      });
 
      // mobile left side nav
@@ -54,4 +47,13 @@ $(document).ready(function() {
      $("#closeMobileLeftNav").click(function() {
           $("#sitenav.mobile.left").css("left", "-400px");
      });
+
+     // mobile searchbox & close left sidenab
+
+     $("#tooglesearchbox-mobile2").click(function() {
+          $("#sitenav.mobile.left").css("left", "-400px");
+          $("#searchbox-mobile").slideDown(300);
+          $("#searchresults-mobile").delay(350).slideDown(200);
+     });
+
 });

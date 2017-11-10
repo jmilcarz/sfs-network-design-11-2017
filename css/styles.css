@@ -266,16 +266,16 @@ nav#sitenav {
           padding: 0 0 0 10px; }
     nav#sitenav #undersearchbox a.logo {
       position: absolute;
-      top: 5px;
+      top: 10px;
       left: 50%;
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
-      z-index: 2; }
-      nav#sitenav #undersearchbox a.logo:hover {
-        cursor: pointer; }
-      nav#sitenav #undersearchbox a.logo img {
-        height: 40px; }
+      cursor: pointer; }
+      nav#sitenav #undersearchbox a.logo h1 {
+        margin: 0;
+        font-size: 28px;
+        color: #00B519; }
 
 @media screen and (max-width: 735px) {
   nav#sitenav.desktop.top {
@@ -326,15 +326,9 @@ nav#sitenav {
             display: grid;
             grid-template-columns: 80px 1fr;
             grid-gap: 10px; }
-            @media screen and (max-width: 550px) {
-              nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user {
-                height: 120px; } }
             nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user img {
               height: 100%;
               border-radius: 50%; }
-              @media screen and (max-width: 550px) {
-                nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user img {
-                  height: 80px; } }
             nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user .about {
               max-width: 400px;
               display: -webkit-box;
@@ -358,6 +352,11 @@ nav#sitenav {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 15px; }
+                @media screen and (max-width: 465px) {
+                  nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user .about .info {
+                    grid-template-columns: 1fr;
+                    grid-gap: 5px;
+                    grid-template-rows: repeat(2, 25px); } }
                 nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user .about .info .btn {
                   font-size: 15px;
                   display: -webkit-box;
@@ -368,6 +367,13 @@ nav#sitenav {
                   -webkit-justify-content: center;
                   -ms-flex-pack: center;
                   justify-content: center; }
+                  @media screen and (max-width: 555px) {
+                    nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user .about .info .btn {
+                      font-size: 13.5px;
+                      font-weight: 400; } }
+                  @media screen and (max-width: 555px) {
+                    nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user .about .info .btn {
+                      font-size: 12px; } }
                   nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user .about .info .btn i {
                     margin-right: 5px; }
       nav#sitenav.mobile.top #searchbox-mobile .container {
@@ -468,13 +474,15 @@ nav#sitenav {
         height: 42px; }
       nav#sitenav.mobile.top #undersearchbox-mobile .logo {
         position: absolute;
-        top: 8px;
+        top: 10px;
         left: 50%;
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%); }
-        nav#sitenav.mobile.top #undersearchbox-mobile .logo img {
-          height: 35px; }
+        nav#sitenav.mobile.top #undersearchbox-mobile .logo h1 {
+          margin: 0;
+          font-size: 28px;
+          color: #00B519; }
       nav#sitenav.mobile.top #undersearchbox-mobile button#toogleMobileNewPost {
         font-size: 28px;
         color: #000; }
@@ -625,7 +633,9 @@ nav#sitenav.mobile.left {
       height: 42px;
       border-radius: 50%; }
     nav#sitenav.mobile.left header button {
-      font-size: 19px; }
+      font-size: 19px;
+      border: none;
+      background: none; }
   nav#sitenav.mobile.left .info {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -653,7 +663,9 @@ nav#sitenav.mobile.left {
           text-align: left; }
   nav#sitenav.mobile.left .form {
     position: absolute;
-    bottom: 5px;
-    left: 5px; }
+    bottom: 15px;
+    left: 10px; }
     nav#sitenav.mobile.left .form button {
-      font-size: 23px; }
+      font-size: 23px;
+      border: none;
+      background: none; }
