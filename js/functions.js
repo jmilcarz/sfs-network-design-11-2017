@@ -62,5 +62,34 @@ $(document).ready(function() {
           $("#nav-dropdown-user").slideToggle(250);
      });
 
+     // new post modal
 
+     $("#closeNewPostModalDesktop").click(function() {
+          $("#newpostmodalddesktop").fadeOut(200);
+     });
+
+     $("#newPostModalDesktop").click(function() {
+          $("#newpostmodalddesktop").fadeIn(200);
+          $("#newpostPostBody").trigger("select");
+     });
+
+     function readURL(input) {
+
+          if (input.files && input.files[0]) {
+               var reader = new FileReader();
+
+               reader.onload = function(e) {
+                    $('#newpostDesktopImg').attr('src', e.target.result);
+               }
+
+               reader.readAsDataURL(input.files[0]);
+               }
+          }
+     $("#newpostPostImg").change(function() {
+          readURL(this);
+     });
+
+     $("#newpostPostImg").change(function (){
+          $("#newpostPostImg").hide();
+     });
 });

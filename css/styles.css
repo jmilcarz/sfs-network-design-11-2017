@@ -769,10 +769,20 @@ nav#sitenav.mobile.left {
 .grid#timeline {
   display: grid;
   grid-template-columns: 280px 1fr 280px;
-  grid-gap: 20px; }
+  grid-gap: 20px;
+  background: #fff; }
+  @media screen and (max-width: 1206px) {
+    .grid#timeline {
+      grid-template-columns: 280px 1fr 0px; } }
+  @media screen and (max-width: 870px) {
+    .grid#timeline {
+      grid-template-columns: 1fr; } }
   .grid#timeline .column {
     min-height: 50px;
-    background: #fff; }
+    background: #f9f9f9; }
+  @media screen and (max-width: 870px) {
+    .grid#timeline .info.column {
+      display: none; } }
   .grid#timeline .info.column .about {
     height: 160px; }
     .grid#timeline .info.column .about header img.grat-bg {
@@ -849,6 +859,7 @@ nav#sitenav.mobile.left {
           font-weight: 300;
           color: #000; }
   .grid#timeline .post.column > header button#newPostModalDesktop {
+    outline: none;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -868,6 +879,7 @@ nav#sitenav.mobile.left {
     width: 100%;
     border-bottom: 1px solid var(--bordercolor); }
   .grid#timeline .post.column > header .modal.new-post {
+    display: none;
     position: absolute;
     top: 60px;
     left: 50%;
@@ -940,6 +952,20 @@ nav#sitenav.mobile.left {
         padding: 5px;
         -webkit-box-sizing: border-box;
         box-sizing: border-box; }
+      .grid#timeline .post.column > header .modal.new-post .form img {
+        width: 200px;
+        border-radius: 4px;
+        height: 200px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+        -webkit-transition: 300ms all ease-in-out;
+        -o-transition: 300ms all ease-in-out;
+        transition: 300ms all ease-in-out; }
+      .grid#timeline .post.column > header .modal.new-post .form img[src=""] {
+        height: 0px;
+        width: 0px; }
       .grid#timeline .post.column > header .modal.new-post .form button {
         height: 34px;
         padding: 0 15px;
@@ -963,3 +989,6 @@ nav#sitenav.mobile.left {
         transition: 70ms all ease-in-out; }
         .grid#timeline .post.column > header .modal.new-post .form textarea:focus {
           border-color: var(--color); }
+  @media screen and (max-width: 870px) {
+    .grid#timeline .other.column {
+      display: none; } }

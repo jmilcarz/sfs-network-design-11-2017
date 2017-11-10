@@ -2,11 +2,18 @@
      display: grid
      grid-template-columns: 280px 1fr 280px
      grid-gap: 20px
+     background: #fff
+     @media screen and (max-width: 1206px)
+          grid-template-columns: 280px 1fr 0px
+     @media screen and (max-width: 870px)
+          grid-template-columns: 1fr
      .column
           min-height: 50px
-          background: #fff
+          background: #f9f9f9
 
      .info.column
+          @media screen and (max-width: 870px)
+               display: none
           .about
                height: 160px
                header
@@ -88,6 +95,7 @@
      .post.column
           > header
                button#newPostModalDesktop
+                    outline: none
                     display: flex
                     align-items: center
                     justify-content: space-around
@@ -99,6 +107,7 @@
                     width: 100%
                     border-bottom: 1px solid var(--bordercolor)
                .modal.new-post
+                    display: none
                     position: absolute
                     top: 60px
                     left: 50%
@@ -148,6 +157,17 @@
                               padding: 5px
                               box-sizing: border-box
 
+                         img
+                              width: 200px
+                              border-radius: 4px
+                              height: 200px
+                              object-fit: cover
+                              display: block
+                              margin: 0 auto
+                              transition: 300ms all ease-in-out
+                         img[src=""]
+                              height: 0px
+                              width: 0px
                          button
                               height: 34px
                               padding: 0 15px
@@ -168,3 +188,7 @@
                               +tran
                               &:focus
                                    border-color: var(--color)
+
+     .other.column
+          @media screen and (max-width: 870px)
+               display: none

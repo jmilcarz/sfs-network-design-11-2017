@@ -74,8 +74,12 @@
                     .form
                          textarea#newpostPostBody(name="postbody" placeholder="Napisz coś...")
                          input#newpostPostImg(type="file" name="postimg")
+                         img(src="" id="newpostDesktopImg")
                          button#newpostPostSubmitBtn(type="submit", name="sendpost")
                               i.fa.fa-leaf
                               | Wyślij
+          
+          .posts#timelinePosts
+               
      .other.column
      
