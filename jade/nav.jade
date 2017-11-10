@@ -85,8 +85,47 @@ nav#sitenav.desktop.top
                     a(href=""): i.fa.fa-bell
                li#tooglesearchbox
                     i.fa.fa-search
-               li.last
-                    a(href=""): i.fa.fa-user
+               li.last#toogleUserNavDropdown
+                    i.fa.fa-user
+                    ul#nav-dropdown-user
+                         li.about
+                              h1 Jakub Milcarz
+                              h2 @jmilcarz
+                         li
+                              a(href="")
+                                   i.fa.fa-user-circle
+                                   | Profil
+                         li
+                              a(href="")
+                                   i.fa.fa-bolt
+                                   | Timeline
+                         li
+                              a(href="")
+                                   i.fa.fa-bullhorn
+                                   | Obserwowani
+                         li
+                              a(href="")
+                                   i.fa.fa-star
+                                   | Popularne w tej chwili
+                         li.hr
+                         li
+                              a(href="")
+                                   i.fa.fa-question-circle
+                                   | Centrum Pomocy
+                         li
+                              a(href="")
+                                   i.fa.fa-cogs
+                                   | Ustawienia i Prywatność
+                         li
+                              form(action="" method="")
+                                   button(type="submit" name="logoutbtn")
+                                        i.fa.fa-sign-out
+                                        | Wyloguj się
+                         li.hr
+                         li.tooglemodes
+                              a#toogleDarkThemeDesktop
+                                   i.fa.fa-lightbulb-o
+                                   | Dark Theme
 
 nav#sitenav.mobile.top
      #searchbox-mobile

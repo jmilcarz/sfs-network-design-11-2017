@@ -149,6 +149,67 @@ nav#sitenav
                     font-size: 28px
                     color: $color
 
+     #nav-dropdown-user
+          position: absolute
+          transform: translate(-12px, 15px)
+          width: 230px
+          background: #fff
+          border: 3px solid #ecebec
+          margin: 0
+          list-style-type: none
+          padding: 0
+          @media screen and (max-width: 1624px)
+               transform: translate(-120px, 15px)
+          @media screen and (max-width: 1405px)
+               transform: translate(-200px, 15px)
+          @media screen and (max-width: 1240px)
+               transform: translate(-215px, 15px)
+          li
+               i
+                    width: 20px
+               a
+                    font-size: 16px
+                    line-height: 1.8em
+                    font-weight: 300
+               form
+                    button
+                         background: none
+                         border: none
+                         margin: 0
+                         padding: 0
+                         font-weight: 300
+                         font-size: 16px
+                         line-height: 1.8em
+                         font-weight: 300
+                         +tran
+                         &:hover
+                              cursor: pointer
+                              color: #555555
+                         i
+                              width: 20px
+               &.tooglemodes
+                    margin-bottom: 15px
+               &.hr
+                    height: 1px
+                    margin: 15px 0
+                    background: #ecebec
+               &.about
+                    height: 90px
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    border-bottom: 1px solid #ecebec
+                    margin-bottom: 15px
+                    h1, h2
+                         margin: 0
+                         font-weight: 400
+                    h1
+                         font-size: 20px
+                         font-weight: 500
+                    h2
+                         font-size: 15px
+                         font-weight: 300
+
 @media screen and (max-width: 735px)
      nav#sitenav.desktop.top
           display: none
