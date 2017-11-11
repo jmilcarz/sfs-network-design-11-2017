@@ -247,9 +247,10 @@ nav#sitenav.mobile.top
                     i.fa.fa-close
           
           form(action="" method="post")
-               textarea(name="postbody" placeholder="Napisz coś...")
-               input(type="file" name="postImg")
-               button(type="submit").btn
+               textarea#newpostPostBody(name="postbody" placeholder="Napisz coś...")
+               input#newpostPostImg(type="file" name="postimg")
+               img(src="" id="newpostDesktopImg")
+               button#newpostPostSubmitBtn(type="submit", name="sendpost").btn
                     i.fa.fa-bolt
                     | wyślij
 
@@ -303,5 +304,5 @@ nav#sitenav.mobile.left
                          i.fa.fa-sign-out
                          | Wyloguj się
                
-          .form
-               button#toogleDarkTheme: i.fa.fa-lightbulb-o
+          //- .form
+          //-      button#toogleDarkTheme: i.fa.fa-lightbulb-o
