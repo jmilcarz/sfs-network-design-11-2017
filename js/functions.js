@@ -8,8 +8,8 @@ $(document).ready(function() {
      });
 
      $("#searchboxclose").click(function() {
-          $("#searchbox").slideUp(300);
-          $("#searchresults").delay(350).slideUp(200);
+          $("#searchbox").delay(350).slideUp(300);
+          $("#searchresults").slideUp(200);
      });
 
      // mobile new post modal
