@@ -115,4 +115,13 @@ $(document).ready(function() {
           $("#commentscloser2").parent().parent().removeClass("show");
      });
 
+     // mobile profile modal info
+
+     $("#toogleMobileInfoUserModal").click(function() {
+          $("#mobileProfileInfoModal").slideDown(400);
+     });
+
+     $("#closeMobileProfileInfoMobile").click(function() {
+          $("#mobileProfileInfoModal").slideUp(400);
+     });
 });
