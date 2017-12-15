@@ -22,8 +22,66 @@
       </ul>
     </div>
   </nav>
-  <div id="main-container">
-    <div class="container"></div>
+  <div id="auth-container">
+    <div id="main-container">
+      <div class="container">
+        <div class="grid" id="register">
+          <div class="column hello">
+            <h1>Witaj na<br><span>Primus Connection</span></h1>
+            <p>Szukaj znajomych,<br>Czatuj z nimi, pisz posty oraz<br>dodawaj zdjęcia i twórz albumy!</p>
+          </div>
+          <div class="column form">
+            <h1>Utwórz nowe konto!</h1>
+            <form action="" method="post">
+              <div class="row">
+                <input class="marginer" type="text" placeholder="Imię"/>
+                <input type="text" placeholder="Nazwisko"/>
+              </div>
+              <div class="row">
+                <input type="email" placeholder="Adres email"/>
+              </div>
+              <div class="row">
+                <input type="text" placeholder="Username"/>
+              </div>
+              <div class="row">
+                <select name="">
+                  <option value="choose">wybierz swoją płeć</option>
+                  <option value="m">mężczyzna</option>
+                  <option value="f">kobieta</option>
+                  <option value="o">inna</option>
+                </select>
+              </div>
+              <div class="row">
+                <input type="password" placeholder="Hasło"/>
+              </div>
+              <div class="row">
+                <select class="marginer" name="">
+                  <option value="">dzień</option>
+                  <option value=""> </option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+                <select class="marginer" name="">
+                  <option value="">miesiąc</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+                <select name="">
+                  <option value="">rok</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+              </div>
+              <div class="row">
+                <button type="submit" name="registerbtn">Utwórz konto</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">   </script>
   <script src="js/functions.js"></script>

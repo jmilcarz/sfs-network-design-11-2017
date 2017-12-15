@@ -11,11 +11,13 @@ body
      //- include jade/nav.jade
      include jade/nav-not.jade
      
-     #main-container
-          .container
-               //- include jade/timeline.jade
-               //- include jade/profile.jade
-               //- include jade/search.jade
+     #auth-container
+          #main-container
+               .container
+                    //- include jade/timeline.jade
+                    //- include jade/profile.jade
+                    //- include jade/search.jade
+                    include jade/register.jade
                
           
      

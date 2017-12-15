@@ -1,0 +1,42 @@
+.grid#register
+     .column.hello
+          h1 Witaj na<br><span>Primus Connection</span>
+          p Szukaj znajomych,<br>Czatuj z nimi, pisz posty oraz<br>dodawaj zdjęcia i twórz albumy!
+     
+     .column.form
+          h1 Utwórz nowe konto!
+          form(action="" method="post")
+               .row
+                    input(type="text" placeholder="Imię").marginer
+                    input(type="text" placeholder="Nazwisko")
+               .row
+                    input(type="email" placeholder="Adres email")
+               .row
+                    input(type="text" placeholder="Username")
+               .row
+                    select(name="")
+                         option(value="choose") wybierz swoją płeć
+                         option(value="m") mężczyzna
+                         option(value="f") kobieta
+                         option(value="o") inna
+               .row
+                    input(type="password" placeholder="Hasło")
+               .row
+                    select(name="").marginer
+                         option(value="") dzień
+                         option(value="") 
+                         option(value="")
+                         option(value="")
+                    select(name="").marginer
+                         option(value="") miesiąc
+                         option(value="")
+                         option(value="")
+                         option(value="")
+                    select(name="")
+                         option(value="") rok
+                         option(value="")
+                         option(value="")
+                         option(value="")
+               
+               .row
+                    button(type="submit" name="registerbtn") Utwórz konto

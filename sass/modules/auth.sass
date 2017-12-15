@@ -1,0 +1,109 @@
+#auth-container
+     #main-container
+          margin: 0
+     .grid#register
+          height: calc(100vh - 110px)
+          display: grid
+          grid-template-columns: 1fr 1fr
+          grid-gap: 50px
+          @media screen and (max-width: 1060px)
+               grid-gap: 0px
+          @media screen and (max-width: 950px)
+               grid-template-columns: 1fr
+               height: auto
+
+          .hello
+               height: 300px
+               display: flex
+               justify-content: center
+               align-items: center
+               flex-direction: column
+               @media screen and (max-width: 950px)
+                    height: auto
+                    padding-top: 50px
+               h1
+                    margin: 0
+                    text-transform: uppercase
+                    font-size: 40px
+                    font-weight: 800
+                    text-align: center
+                    @media screen and (max-width: 490px)
+                         font-size: 32px
+                    @media screen and (max-width: 400px)
+                         font-size: 28px
+                    span
+                         color: $color
+                         font-size: 48px
+                         @media screen and (max-width: 1060px)
+                              font-size: 45px
+                         @media screen and (max-width: 490px)
+                              font-size: 38px
+                         @media screen and (max-width: 400px)
+                              font-size: 32px
+
+               p
+                    margin: 0
+                    margin-top: 15px
+                    font-size: 22px
+                    text-align: center
+                    text-transform: uppercase
+                    font-weight: 300
+                    line-height: 1.5em
+                    @media screen and (min-width: 490px)
+                         font-size: 19px
+                    @media screen and (max-width: 400px)
+                         font-size: 18px
+                         line-height: 1.4em
+
+          .form
+               max-width: 550px
+               margin: 50px auto
+               @media screen and (min-width: 950px)
+                    margin: 25px auto
+               h1
+                    text-align: center
+                    text-transform: uppercase
+                    font-weight: 600
+                    font-size: 28px
+                    @media screen and (min-width: 950px)
+                         text-align: left
+               form
+                    display: flex
+                    flex-direction: column
+                    .row
+                         display: flex
+                         margin-bottom: 18px
+                         input, select
+                              outline: none
+                              border: 1.5px solid #000
+                              margin: 0
+                              box-sizing: border-box
+                              padding: 0 5px
+                              border-radius: 0px
+                              height: 36px
+                              font-size: 14.5px
+                              width: 100%
+                              background: #fff
+                              +tran
+                              &:focus
+                                   border-color: $color
+
+                         button
+                              outline: none
+                              border: 1.5px solid darken($color, 15%)
+                              margin: 0
+                              box-sizing: border-box
+                              padding: 0 5px
+                              border-radius: 0px
+                              height: 36px
+                              font-size: 14.5px
+                              width: 100%
+                              color: #fff
+                              background: $color
+                              cursor: pointer
+                              +tran
+                              &:hover
+                                   background: lighten($color, 2%)
+
+                         .marginer
+                              margin-right: 15px
