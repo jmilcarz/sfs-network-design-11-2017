@@ -219,6 +219,7 @@ nav#sitenav {
           height: 32px;
           margin: 0;
           background: #006a9c;
+          color: #fff;
           border: none;
           border-radius: 0px;
           -webkit-box-sizing: border-box;
@@ -231,6 +232,7 @@ nav#sitenav {
           -o-transition: 70ms all ease-in-out;
           transition: 70ms all ease-in-out; }
           nav#sitenav #searchbox .container .form button:hover {
+            background: #00364f;
             cursor: pointer; }
       nav#sitenav #searchbox .container #searchboxclose {
         outline: none;
@@ -419,12 +421,19 @@ nav#sitenav {
           grid-gap: 25px; }
           nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user {
             height: 80px;
-            display: grid;
-            grid-template-columns: 80px 1fr;
-            grid-gap: 10px; }
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center; }
             nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user img {
-              height: 100%;
-              border-radius: 50%; }
+              height: 70px;
+              width: 70px;
+              border-radius: 50%;
+              margin-right: 15px; }
             nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user .about {
               max-width: 400px;
               display: -webkit-box;
@@ -454,7 +463,7 @@ nav#sitenav {
                     grid-gap: 5px;
                     grid-template-rows: repeat(2, 25px); } }
                 nav#sitenav.mobile.top #searchbox-mobile #searchresults-mobile .grid .user .about .info .btn {
-                  font-size: 15px;
+                  font-size: 14.5px;
                   display: -webkit-box;
                   display: -webkit-flex;
                   display: -ms-flexbox;

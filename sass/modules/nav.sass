@@ -100,6 +100,7 @@ nav#sitenav
                          height: 32px
                          margin: 0
                          background: $border
+                         color: #fff
                          border: none
                          border-radius: 0px
                          box-sizing: border-box
@@ -109,6 +110,7 @@ nav#sitenav
                          font-size: 17px
                          +tran
                          &:hover
+                              background: darken($color, 20%)
                               cursor: pointer
                #searchboxclose
                     outline: none
@@ -265,12 +267,13 @@ nav#sitenav
                          grid-gap: 25px
                          .user
                               height: 80px
-                              display: grid
-                              grid-template-columns: 80px 1fr
-                              grid-gap: 10px
+                              display: flex
+                              align-items: center
                               img
-                                   height: 100%
+                                   height: 70px
+                                   width: 70px
                                    border-radius: 50%
+                                   margin-right: 15px
                               .about
                                    max-width: 400px
                                    display: flex
@@ -289,7 +292,7 @@ nav#sitenav
                                              grid-gap: 5px
                                              grid-template-rows: repeat(2, 25px)
                                         .btn
-                                             font-size: 15px
+                                             font-size: 14.5px
                                              display: flex
                                              justify-content: center
                                              @media screen and (max-width: 555px)

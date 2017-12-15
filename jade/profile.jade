@@ -32,8 +32,9 @@
                          i.fa.fa-birthday-cake
                          | 17.06.2002
                     li
-                         i.fa.fa-leaf
+                         i.fa.fa-connectdevelop
                          | 1435
+                         
           .stuff-mobile-modal#mobileProfileInfoModal
                header
                     h1 Informacje
@@ -55,14 +56,13 @@
                          i.fa.fa-birthday-cake
                          | 17.06.2002
                     li
-                         i.fa.fa-leaf
+                         i.fa.fa-connectdevelop
                          | 1435
                          
      .post.column
           header
                button#newPostModalDesktop
                     | Napisz coś ciekawego...
-                    i.fa.fa-leaf
                .modal#newpostmodalddesktop.new-post
                     header
                          h1 Nowy Post
@@ -150,3 +150,8 @@
                                                        i.fa.fa-thumbs-up
                                                        span Lubię to!
                                                             span (2)
+                              
+                              form.post_comments__form
+                                   img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDuv0qtOl3RiTcLeIZx-kHxDz7IgpxT07Pnf6AohxAmKKaOqGGw")
+                                   input(type="text" name="commentbody" id="" placeholder="Napisz komentarz...")
+                                   button(type="submit" name="send" id=""): i.fa.fa-angle-right
