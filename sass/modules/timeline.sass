@@ -4,17 +4,23 @@
      grid-gap: 20px
      @media screen and (max-width: 1206px)
           grid-template-columns: 280px 1fr 130px
-     @media screen and (max-width: 870px)
+     @media screen and (max-width: 1100px)
+          grid-template-columns: 280px 1fr 50px
+     @media screen and (max-width: 1000px)
+          grid-template-columns: 280px 1fr
+     @media screen and (max-width: 815px)
+          grid-template-columns: 250px 1fr
+          grid-gap: 10px
+     @media screen and (max-width: 750px)
           grid-template-columns: 1fr
           grid-gap: 0px
+
      .column
           min-height: 50px
           background: #fff
 
-     .other.column
-          @media screen and (max-width: 870px)
-               display: none
-
+     .post.column
+          background: rgba(0, 0, 0, 0)
 
      .info.column
           position: fixed
@@ -22,7 +28,9 @@
           top: 55px
           height: calc(100vh - 55px)
           overflow: scroll
-          @media screen and (max-width: 870px)
+          @media screen and (max-width: 815px)
+               width: 250px
+          @media screen and (max-width: 750px)
                display: none
           .about
                height: 160px
@@ -40,13 +48,13 @@
                          display: block
                          margin: 0 auto
                          transform: translateY(-40px)
-                         border: 2px solid $border
+                         border: 2px solid $border2
                          object-fit: cover
 
                .box
                     margin-top: -35px
                     padding-bottom: 10px
-                    border-bottom: 1px solid $border
+                    border-bottom: 1px solid $border2
                     h1
                          margin: 0
                          text-align: center
@@ -88,7 +96,7 @@
                                    height: 50px
                                    object-fit: cover
                                    border-radius: 50%
-                                   border: 2px solid $border
+                                   border: 2px solid $border2
 
                               .info
                                    h1
@@ -104,7 +112,11 @@
 
 
 .post.column
+     background: rgba(0, 0, 0, 0)
      grid-column: 2/3
+     width: 100%
+     @media screen and (max-width: 750px)
+          grid-column: 1/2
      > header
           @media screen and (max-width: 735px)
                display: none
@@ -118,8 +130,10 @@
                height: 40px
                line-height: 40px
                font-size: 17px
+               border-radius: 0px
                width: 100%
-               border-bottom: 1px solid $border
+               border-bottom: 1px solid $border2
+               background: #fff
           .modal.new-post
                display: none
                position: absolute
@@ -138,15 +152,16 @@
                     justify-content: space-between
                     align-items: center
                     height: 50px
-                    border-bottom: 3px solid $border
+                    border-bottom: 3px solid $border2
                     padding: 0 30px
                     h1
                          margin: 0
-                         font-weight: 800
-                         font-size: 22px
+                         font-size: 20px
+                         color: $color
                     button
                          outline: none
                          border: none
+                         border-radius: 0px
                          background: none
                          font-size: 13px
                          cursor: pointer
@@ -166,10 +181,14 @@
                     textarea, input, button
                          margin: 5px 0
                          outline: none
-                         border: 2px solid $border
+                         border: 2px solid $border2
                          background: #fff
                          padding: 5px
                          box-sizing: border-box
+                         border-radius: 0px
+                         +tran
+                         &:focus
+                              border-color: $border
 
                     img
                          width: 200px
@@ -205,176 +224,155 @@
 
      .posts
           box-sizing: border-box
+          background: rgba(0, 0, 0, 0)
+          @media screen and (max-width: 750px)
+               max-width: 630px
+               margin: 0 auto
           .post
-               display: flex
-               flex-direction: column
-               border-bottom: 2px solid $border
-               .row.info
+               margin-bottom: 10px
+               padding-bottom: 10px
+               background: #fff
+               header.post__header
                     display: flex
-                    align-items: center
-                    height: 65px
                     box-sizing: border-box
-                    padding: 0 15px
+                    padding: 10px 15px
                     img
-                         height: 57px
-                         width: 57px
+                         height: 55px
+                         width: 55px
                          object-fit: cover
+                         border: 1px solid #f3f3f3
                          border-radius: 50%
-                         border: 1px solid $border
-                    .about
-                         box-sizing: border-box
-                         padding-left: 10px
+                         margin-right: 12px
+
+                    .post_header__user_info
                          display: flex
                          flex-direction: column
-                         .names
-                              display: flex
-                              align-items: center
-                              height: 20px
-                              @media screen and (max-width: 400px)
-                                   flex-direction: column
-                                   align-items: flex-start
-                                   height: 38px
-                                   margin-top: 10px
-                              h1
-                                   font-size: 22px
-                                   margin: 0
-                                   font-weight: 600
-                                   @media screen and (max-width: 435px)
-                                        font-size: 19px
-                              h2
-                                   font-size: 16px
+                         .post_header__name
+                              margin: 0
+                              font-size: 20px
+                              font-weight: 600
+                              span.username
                                    font-weight: 300
-                                   margin: 0
                                    margin-left: 10px
-                                   @media screen and (max-width: 435px)
-                                        font-size: 15px
-                                   @media screen and (max-width: 400px)
-                                        margin: 0
+                                   font-size: 17px
+                         .post_header_date
+                              margin: 0
+                              margin-top: 2px
+                              i
+                                   margin-right: 5px
 
-                         .date
-                              margin-top: 5px
-                              p
-                                   margin: 0
-                                   color: #555555
-                                   font-weight: 300
-                                   @media screen and (max-width: 435px)
-                                        font-size: 14px
-                                   i
-                                        margin-right: 5px
-                                        color: #000
-               .row.content
-                    padding: 10px 15px
+               .post__content
+                    padding: 0px 15px 10px 15px
+                    box-sizing: border-box
+                    p
+                         margin: 0
+                         line-height: 1.3em
+                         font-size: 17px
                     img
                          width: 100%
                          border-radius: 4px
-                    p
-                         font-size: 19px
-                         font-weight: 300
-                         margin: 8px 0 15px 0
-                         @media screen and (max-width: 470px)
-                              margin-top: 0
-                              font-size: 18px
 
-               .row.stuff
+               .post__integration
+                    padding: 10px 15px
+                    border-top: 1px solid $border2
+                    border-bottom: 1px solid $border2
                     display: flex
-                    height: 50px
-                    // align-items: center
-                    justify-content: space-around
-                    .delete
-                         // display: none
-                         > i
-                              margin-right: 5px
-
-                    .likes
-                         // display: none
-                         > i
-                              margin-right: 5px
-                    .comments
-                         > i
-                              margin-right: 5px
-                    .comments-modal
+                    .post_btn
+                         font-size: 16px
+                         outline: none
+                         border: 0px
                          background: #fff
-                         border: 3px solid $border
-                         max-width: 550px
-                         width: 100%
-                         display: none
-                         @media screen and (max-width: 1206px)
-                              max-width: 830px
-                              width: calc(100% - 30px)
+                         padding: 0
+                         +tran
+                         &:hover
+                              color: darken($color, 10%)
+                              cursor: pointer
+                         i
+                              margin-right: 4px
+                         span
+                              span
+                                   margin-left: 4px
+                                   color: #000
 
-                         > header
+                         &.active
+                              color: $color
+
+
+               .post__comments
+                    box-sizing: border-box
+                    padding: 12px 15px
+                    .comments
+                         max-height: 250px
+                         overflow-y: scroll
+                         .comment
                               display: flex
-                              justify-content: space-between
-                              align-items: center
-                              height: 50px
-                              border-bottom: 3px solid $border
-                              box-sizing: border-box
-                              padding: 0 15px
-                              h1
-                                   font-size: 22px
-                              button
-                                   outline: none
-                                   border: none
-                                   background: none
-                                   font-size: 15px
-                                   i
-                                        margin-left: 5px
-
-                         .all-comments
-                              display: grid
-                              grid-template-columns: 1fr
-                              grid-gap: 10px
-                              height: 100%
-                              max-height: 300px
-                              overflow-y: scroll
-                              .comment
-                                   display: grid
-                                   grid-template-columns: 60px 1fr
-                                   @media screen and (max-width: 500px)
-                                        grid-template-columns: 40px 1fr
-                                   grid-gap: 10px
-                                   box-sizing: border-box
-                                   padding: 8px 15px
-                                   border-bottom: 1px solid $border
-                                   img
-                                        width: 60px
-                                        height: 60px
-                                        object-fit: cover
-                                        border-radius: 50%
-                                        @media screen and (max-width: 500px)
-                                             width: 40px
-                                             height: 40px
+                              padding-bottom: 10px
+                              img
+                                   height: 45px
+                                   border-radius: 50%
+                                   border: 1px solid $border2
+                                   margin-right: 10px
+                              .content
+                                   width: 100%
+                                   display: flex
+                                   flex-direction: column
+                                   .body
+                                        box-sizing: border-box
+                                        padding: 8px 10px
+                                        border-radius: 12px
+                                        background: #eff1f3
+                                        p
+                                             line-height: 1.3em
+                                             margin: 0 auto
                                    .info
-                                        display: flex
-                                        flex-direction: column
-                                        justify-content: center
-                                        .names
-                                             h1
-                                                  margin: 0
-                                                  font-size: 21px
-                                                  @media screen and (max-width: 500px)
-                                                       font-size: 19px
-                                             h2
-                                                  margin: 0
-                                                  font-size: 17px
-                                                  font-weight: 300
-                                                  @media screen and (max-width: 500px)
-                                                       font-size: 15px
+                                        box-sizing: border-box
+                                        padding-left: 15px
+                                        .comment_btn
+                                             outline: none
+                                             border: none
+                                             padding: 0
+                                             margin: 0
+                                             font-size: 13px
+                                             +tran
+                                             &:hover
+                                                  color: darken($color, 10%)
+                                                  cursor: pointer
+                                             i
+                                                  margin-right: 4px
+                                             span
+                                                  span
+                                                       margin-left: 4px
+                                                       color: #000
 
-                                        .content
-                                             margin-top: 15px
-                                             @media screen and (max-width: 500px)
-                                                  margin-top: 5px
-                                             p
-                                                  margin: 0
-                                                  font-size: 16px
-                                                  font-weight: 300
-                                                  @media screen and (max-width: 500px)
-                                                       font-size: 15px
+                    form.post_comments__form
+                         padding-top: 12px
+                         display: flex
+                         align-items: center
+                         height: 35px
+                         width: calc(100% - 15px)
+                         img
+                              height: 38px
+                              border-radius: 50%
+                              border: 1px solid $border2
+                              margin-right: 10px
 
-                    .comments-modal.show
-                         position: relative
-                         display: block
-                         z-index: 100
-                         margin-left: -115px
-                         height: 350px
+                         input
+                              outline: none
+                              border-radius: 14.5px
+                              width: calc(100% - 25px)
+                              height: 29px
+                              padding: 0 10px
+                              border: 1.2px solid #000
+                              font-size: 14px
+                              +tran
+                              &:focus
+                                   border-color: $color
+
+                         button
+                              width: 0px
+                              position: relative
+                              margin-left: -30px
+                              outline: none
+                              background: none
+                              border: 0px
+                              font-size: 18px

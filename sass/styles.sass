@@ -1,10 +1,11 @@
 =tran
      transition: 70ms all ease-in-out
 
-$color: #0072b1
+$color: #007bb5
 $scolor: #619cff
 $tcolor: #ee4848
-$border: #ecebec
+$border: darken($color, 5%)
+$border2: #ecebec
 
 body
      font-family: 'Roboto', sans-serif
@@ -65,6 +66,8 @@ a
      margin: 0 auto
      box-sizing: border-box
      padding: 0 10px
+     @media screen and (max-width: 700px)
+          padding: 0
 
 #main-container
      margin-top: 53px

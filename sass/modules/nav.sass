@@ -6,6 +6,8 @@ nav#sitenav
      top: 0
      left: 0
      width: 100%
+     .container
+          padding: 0 10px
      &.desktop.top
           border-bottom: 3px solid $border
 
@@ -250,7 +252,6 @@ nav#sitenav
                     border: 3px solid $border
                     max-height: calc(100vh - 50px)
                     overflow: scroll
-                    // display: none
                     position: absolute
                     top: 50px
                     left: 0
@@ -311,18 +312,22 @@ nav#sitenav
                               margin: 0
                               background: $border
                               border: none
+                              border-radius: 0px
                               box-sizing: border-box
                               padding: 0 5px
                               width: 100%
                               outline: none
+                              color: #fff
                               font-size: 17px
                               +tran
                               &::placeholder
-                                   color: #cdc9cd
+                                   color: #f3f3f3
                                    font-size: 15px
                          button
                               outline: none
                               height: 45px
+                              border-radius: 0px
+                              color: #fff
                               margin: 0
                               background: $border
                               border: none
@@ -462,7 +467,7 @@ nav#sitenav
           bottom: 0px
           left: 0
           width: 100%
-          border-top: 3px solid $border
+          border-top: 3px solid $border2
           .container
                display: flex
                justify-content: space-around
@@ -488,7 +493,7 @@ nav#sitenav.mobile.left
           justify-content: space-between
           align-items: center
           height: 53px
-          border-bottom: 3px solid $border
+          border-bottom: 3px solid $border2
           box-sizing: border-box
           padding: 0 10px
           a > img
@@ -504,7 +509,7 @@ nav#sitenav.mobile.left
      .info
           box-sizing: border-box
           padding: 10px
-          border-bottom: 1px solid $border
+          border-bottom: 1px solid $border2
           h1, h2
                margin: 0
           h1
