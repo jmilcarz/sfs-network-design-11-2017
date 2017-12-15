@@ -543,3 +543,95 @@ nav#sitenav.mobile.left
                font-size: 23px
                border: none
                background: none
+
+nav#sitenav-not
+     background: $color
+     height: 85px
+     box-shadow: 0px 4px 5px #e3e3e3
+     .container
+          display: flex
+          height: 100%
+          align-items: center
+          justify-content: space-between
+          box-sizing: border-box
+          padding: 0 15px
+          @media screen and (max-width: 395px)
+               padding: 0 5px
+
+          > a
+               text-decoration: none
+               color: #fff
+               font-weight: 500
+               font-size: 28px
+               @media screen and (max-width: 515px)
+                    font-size: 25px
+               @media screen and (max-width: 490px)
+                    font-size: 22px
+               @media screen and (max-width: 435px)
+                    font-size: 20px
+                    font-weight: 400
+
+          form
+               display: flex
+               @media screen and (max-width: 775px)
+                    display: none
+               input
+                    border: 1px solid $color
+                    margin: 0
+                    box-sizing: border-box
+                    padding: 0 5px
+                    height: 26px
+                    width: 170px
+                    outline: none
+                    border-radius: 0px
+                    margin-right: 25px
+                    font-size: 12px
+                    box-shadow: 0px 0px 5px darken($color, 15%)
+                    +tran
+                    &:focus
+                         box-shadow: 0px 0px 10px darken($color, 25%)
+               button
+                    border: 1px solid $color
+                    margin: 0
+                    box-sizing: border-box
+                    padding: 0 5px
+                    height: 26px
+                    width: 90px
+                    outline: none
+                    border-radius: 0px
+                    font-size: 12px
+                    box-shadow: 0px 0px 5px darken($color, 15%)
+                    cursor: pointer
+                    background: #fff
+                    +tran
+                    &:hover
+                         box-shadow: 0px 0px 10px darken($color, 25%)
+
+          ul
+               list-style-type: none
+               padding: 0
+               margin: 0
+               display: flex
+               align-items: center
+               @media screen and (min-width: 775px)
+                    display: none
+               li
+                    a
+                         color: #fff
+                         font-weight: 300
+                         @media screen and (max-width: 490px)
+                              font-size: 15px
+                         @media screen and (max-width: 435px)
+                              font-size: 13px
+                         &.btn
+                              background: darken($color, 13%)
+
+                    &:first-child
+                         margin-right: 15px
+
+                    @media screen and (max-width: 395px)
+                         padding: 4px 8px
+                         border-radius: 3px
+                         background: darken($color, 13%)
+                         &:last-child
+                              display: none

@@ -1,9 +1,10 @@
 .grid#search
-     .user
-          header
-               img.grat-bg(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
-               img.profile-img(src="https://i.ytimg.com/vi/zxQU55pItxU/maxresdefault.jpg")
-          .info
-               h1 Bear Grylls
-               h2 @grylls
-          
+     - for (var i = 0; i<=32; i++)
+          .user
+               header
+                    img.grat-bg(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
+                    img.profile-img(src="https://i.ytimg.com/vi/zxQU55pItxU/maxresdefault.jpg")
+               .info
+                    h1 Bear Grylls
+                    a.btn-follow.btn(href="") Odwiedź profil
+                    
