@@ -1,13 +1,20 @@
+.profile-big-banner
+     img.background(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
+     .overlay
+     .info
+          img.profile-img(src="https://i.ytimg.com/vi/zxQU55pItxU/maxresdefault.jpg")
+          h1.name Kuba Milcarz
+          
 .grid#profile
      .about.column
-          .info
-               header
-                    img.grat-bg(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
-                    img.profile-img(src="https://i.ytimg.com/vi/zxQU55pItxU/maxresdefault.jpg")
-               .box
-                    h1 Bear Grylls
-                    h2 @grylls
-                    button.btn#toogleMobileInfoUserModal informacje
+          //- .info
+          //-      header
+          //-           img.grat-bg(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
+          //-           img.profile-img(src="https://i.ytimg.com/vi/zxQU55pItxU/maxresdefault.jpg")
+          //-      .box
+          //-           h1 Bear Grylls
+          //-           h2 @grylls
+          //-           button.btn#toogleMobileInfoUserModal informacje
                     
           .stuff
                h1.more-space Informacje
@@ -71,121 +78,75 @@
                               | Wyślij
           
           .posts#timelinePosts
-               .post
-                    .row.info
-                         img(src="https://i2-prod.mirror.co.uk/incoming/article9863039.ece/ALTERNATES/s615/Polish-girl-found-hanged-in-the-toilets-at-school.jpg")
-                         .about
-                              .names
-                                   h1 Eliza Wyrzgoń
-                                   h2 @elizkagon
-                              .date
-                                   p
+               - for (var i = 0; i<=15; i++)
+                    .post
+                         header.post__header
+                              img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDuv0qtOl3RiTcLeIZx-kHxDz7IgpxT07Pnf6AohxAmKKaOqGGw").post_header__img
+                              .post_header__user_info
+                                   h1.post_header__name
+                                        | Kuba Milcarz
+                                        span.username @jmilcarz
+                                   p.post_header_date 
                                         i.fa.fa-clock-o
-                                        | 24.10.2017
-                                   
-                    .row.content
-                         p Lot, delectus doloribus ex! Saepe iure, tempore magnam iusto, blanditiis culpinus odio nesciunt!
-                         img(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
-                    .row.stuff
-                         .delete
-                              i.fa.fa-close
-                              | usuń
-                         .likes
-                              i.fa.fa-heart
-                              | 7
-          
-                         .comments
-                              i.fa.fa-comments
-                              | 43
-                                   
-                         .comments-modal
-                              header
-                                   h1.com-title Komentarze
-                                   button#commentscloser2
-                                        | zamknij
-                                        i.fa.fa-close
-                              
-                              .all-comments
+                                        | 21.12.2018
+
+                         div.post__content
+                              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ducimus suscipit eaque laboriosam dicta cum dolores aperiam voluptatem cupiditate, ut accusamus in exercitationem ad sit eius odit. Ipsum, praesentium sit.
+
+                         div.post__integration
+                              button.post_btn
+                                   i.fa.fa-thumbs-up
+                                   span Lubię to! 
+                                        span (42)
+                         div.post__comments
+                              .comments
                                    .comment
-                                        img(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
-                                        .info
-                                             .names
-                                                  h1 Piotr Wyrzgoń
-                                                  h2 @elizkagon
-                                             .content
-                                                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, ears maiores illo autem quibusdam tenetur dicta inventore quaerat!
+                                        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDuv0qtOl3RiTcLeIZx-kHxDz7IgpxT07Pnf6AohxAmKKaOqGGw")
+                                        .content
+                                             .body
+                                                  p ectetur adipisicing elit. Tempore aut quos, vol eveniet expedita exercitationem minus do sit amet, consectetur!
+                                             .info
+                                                  button.comment_btn
+                                                       i.fa.fa-thumbs-up
+                                                       span Lubię to!
+                                                            span (2)
                                    .comment
-                                        img(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
-                                        .info
-                                             .names
-                                                  h1 Eliza Wyrzgoń
-                                                  h2 @elizkagon
-                                             .content
-                                                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, ears maiores illo autem quibusdam tenetur dicta inventore quaerat!
+                                        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDuv0qtOl3RiTcLeIZx-kHxDz7IgpxT07Pnf6AohxAmKKaOqGGw")
+                                        .content
+                                             .body
+                                                  p Lorem ipsum dolor sit amet, consectetur!
+                                             .info
+                                                  button.comment_btn
+                                                       i.fa.fa-thumbs-up
+                                                       span Lubię to!
+                                                            span (2)
                                    .comment
-                                        img(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
-                                        .info
-                                             .names
-                                                  h1 Eliza Wyrzgoń
-                                                  h2 @elizkagon
-                                             .content
-                                                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, ears maiores illo autem quibusdam tenetur dicta inventore quaerat!          
-                                                  
-                         
-               .post
-                    .row.info
-                         img(src="https://i2-prod.mirror.co.uk/incoming/article9863039.ece/ALTERNATES/s615/Polish-girl-found-hanged-in-the-toilets-at-school.jpg")
-                         .about
-                              .names
-                                   h1 Eliza Wyrzgoń
-                                   h2 @elizkagon
-                              .date
-                                   p
-                                        i.fa.fa-clock-o
-                                        | 24.10.2017
-                                   
-                    .row.content
-                         p Lot, delectus doloribus ex! Saepe iure, tempore magnam iusto, blanditiis culpinus odio nesciunt!
-                         img(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
-                    .row.stuff
-                         .likes
-                              i.fa.fa-heart
-                              | 7
-          
-                         .comments
-                              i.fa.fa-comments
-                              | 43
-                                   
-                         .comments-modal
-                              header
-                                   h1.com-title Komentarze
-                                   button#commentscloser1
-                                        | zamknij
-                                        i.fa.fa-close
-                              
-                              .all-comments
+                                        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDuv0qtOl3RiTcLeIZx-kHxDz7IgpxT07Pnf6AohxAmKKaOqGGw")
+                                        .content
+                                             .body
+                                                  p Lorem ipsum dolor sit amet, consectetur!
+                                             .info
+                                                  button.comment_btn
+                                                       i.fa.fa-thumbs-up
+                                                       span Lubię to!
+                                                            span (2)
                                    .comment
-                                        img(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
-                                        .info
-                                             .names
-                                                  h1 Piotr Wyrzgoń
-                                                  h2 @elizkagon
-                                             .content
-                                                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, ears maiores illo autem quibusdam tenetur dicta inventore quaerat!
+                                        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDuv0qtOl3RiTcLeIZx-kHxDz7IgpxT07Pnf6AohxAmKKaOqGGw")
+                                        .content
+                                             .body
+                                                  p Lorem ipsum dolor sit amet, consectetur!
+                                             .info
+                                                  button.comment_btn
+                                                       i.fa.fa-thumbs-up
+                                                       span Lubię to!
+                                                            span (2)
                                    .comment
-                                        img(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
-                                        .info
-                                             .names
-                                                  h1 Eliza Wyrzgoń
-                                                  h2 @elizkagon
-                                             .content
-                                                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, ears maiores illo autem quibusdam tenetur dicta inventore quaerat!
-                                   .comment
-                                        img(src="http://r.ddmcdn.com/s_f/o_1/DSC/uploads/2015/05/where-are-they-now-new-bear-grylls.jpg")
-                                        .info
-                                             .names
-                                                  h1 Eliza Wyrzgoń
-                                                  h2 @elizkagon
-                                             .content
-                                                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, ears maiores illo autem quibusdam tenetur dicta inventore quaerat!          
-                                   
+                                        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDuv0qtOl3RiTcLeIZx-kHxDz7IgpxT07Pnf6AohxAmKKaOqGGw")
+                                        .content
+                                             .body
+                                                  p Lorem ipsum dolor sit amet, consectetur!
+                                             .info
+                                                  button.comment_btn
+                                                       i.fa.fa-thumbs-up
+                                                       span Lubię to!
+                                                            span (2)
