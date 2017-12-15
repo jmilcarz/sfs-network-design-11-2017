@@ -1,16 +1,14 @@
 =tran
      transition: 70ms all ease-in-out
 
-$color: #00B519
+$color: #0072b1
 $scolor: #619cff
 $tcolor: #ee4848
-
-@import "modules/vars"
+$border: #ecebec
 
 body
-     font-family: 'Montserrat', sans-serif
+     font-family: 'Roboto', sans-serif
      margin: 0
-     overflow: hidden
 
 a
      font-weight: 600
@@ -32,35 +30,35 @@ a
      +tran
      &:hover
           cursor: pointer
-          border-color: var(--color)
+          border-color: $color
           color: #000
           background: #f9f9f9
 
 .btn-follow
-     background: var(--color)
+     background: $color
      color: #fff
-     border-color: var(--bordercolor)
+     border-color: $border
      &:hover
           color: #fff
-          background: var(--color-dark)
+          background: darken($color, 10%)
 
 .btn-stop-follow
-     background: var(--tcolor)
+     background: $tcolor
      color: #fff
-     border-color: var(--bordercolor)
+     border-color: $border
      &:hover
-          border-color: var(--tcolor)
+          border-color: $tcolor
           color: #fff
-          background: var(--tcolor-dark)
+          background: darken($tcolor, 10%)
 
 .btn-send-message
      background: #fff
      color: #000
-     border-color: var(--scolor)
+     border-color: $color
      &:hover
-          color: var(--scolor)
+          color: $color
           background: #fff
-          border-color: var(--scolor)
+          border-color: $color
 
 .container
      max-width: 1200px
@@ -69,9 +67,8 @@ a
      padding: 0 10px
 
 #main-container
-     height: calc(100vh - 50px)
-     background: #f0f0f0
-     overflow: scroll
+     margin-top: 53px
+     background: #f6f9fa
 
 #main-container > .container
      max-width: 1200px

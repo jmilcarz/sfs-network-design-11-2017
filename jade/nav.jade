@@ -8,65 +8,18 @@ nav#sitenav.desktop.top
           #searchresults
                a.btn(href="") Pokaż wyniki na oddzielnej stronie
                .grid
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość
-                    
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość
-                                   
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość
-                                        
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-stop-follow(href="")
-                                        | Przestań Obserwować
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość     
-     
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość          
-                         
+                    - for (var i = 0; i<=10; i++)
+                         .user
+                              img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+                              .about
+                                   h2.name Jakub Milcarz
+                                   .info
+                                        a.btn.btn-follow(href="")
+                                             | Wejdź na profil
+                                        a.btn.btn-send-message(href="")
+                                             i.fa.fa-comment
+                                             | Wyślij wiadomość
+
      .container#undersearchbox
           ul.links
                li.first
@@ -76,7 +29,7 @@ nav#sitenav.desktop.top
                li.last
                     a(href="") Wiadomosci
           a.logo(href="")
-               h1 SFS
+               h1 Primus Connection
                
           ul.links
                li.first
@@ -137,104 +90,24 @@ nav#sitenav.mobile.top
           #searchresults-mobile
                a.btn(href="") Pokaż wyniki na oddzielnej stronie
                .grid
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość
-                    
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość
+                    - for (var i = 0; i<=10; i++)
+                         .user
+                              img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
+                              .about
+                                   h2.name Jakub Milcarz
+                                   .info
+                                        a.btn.btn-follow(href="")
+                                             | Wejdź na profil
+                                        a.btn.btn-send-message(href="")
+                                             i.fa.fa-comment
+                                             | Wyślij wiadomość
                                    
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość
-                                        
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-stop-follow(href="")
-                                        | Przestań Obserwować
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość     
-
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość  
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość  
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość  
-                    .user
-                         img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
-                         .about
-                              h2.name Jakub Milcarz
-                              .info
-                                   a.btn.btn-follow(href="")
-                                        i.fa.fa-leaf
-                                        | Obserwuj
-                                   a.btn.btn-send-message(href="")
-                                        i.fa.fa-comment
-                                        | Wyślij wiadomość  
-
      .container#undersearchbox-mobile
           button#toogleLeftSideNav
                img(src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18274810_450468415293985_5791790352588547985_n.jpg?oh=5d0595f948104bbc5f8adcd2015ffcfb&oe=5AA990E3")
           
           .logo
-               h1 SFS
+               h1 Primus Connection
           
           button#toogleMobileNewPost: i.fa.fa-leaf
 
@@ -304,5 +177,5 @@ nav#sitenav.mobile.left
                          i.fa.fa-sign-out
                          | Wyloguj się
                
-          //- .form
-          //-      button#toogleDarkTheme: i.fa.fa-lightbulb-o
+          .form
+               button#toogleDarkTheme: i.fa.fa-lightbulb-o

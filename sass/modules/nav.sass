@@ -2,8 +2,12 @@ nav#sitenav
      background: #fff
      height: 50px
      z-index: 10000
+     position: fixed
+     top: 0
+     left: 0
+     width: 100%
      &.desktop.top
-          border-bottom: 3px solid #ecebec
+          border-bottom: 3px solid $border
 
      #searchbox
           position: absolute
@@ -11,12 +15,12 @@ nav#sitenav
           left: 0
           width: 100%
           display: none
-          background: var(--color-rgba-09)
+          background: rgba($color, 0.95)
           height: 50px
           z-index: 100
           #searchresults
                background: #fff
-               border: 3px solid #ecebec
+               border: 3px solid $border
                max-height: 500px
                overflow: scroll
                display: none
@@ -51,7 +55,6 @@ nav#sitenav
                                    font-size: 24px
                                    font-weight: 300
                               .info
-                                   // background: pink
                                    display: grid
                                    grid-template-columns: repeat(2, 1fr)
                                    grid-gap: 15px
@@ -79,7 +82,7 @@ nav#sitenav
                     input
                          height: 32px
                          margin: 0
-                         background: #ecebec
+                         background: $border
                          border: none
                          box-sizing: border-box
                          padding: 0 5px
@@ -94,8 +97,9 @@ nav#sitenav
                          outline: none
                          height: 32px
                          margin: 0
-                         background: #ecebec
+                         background: $border
                          border: none
+                         border-radius: 0px
                          box-sizing: border-box
                          padding: 0 5px
                          width: 50px
@@ -140,21 +144,21 @@ nav#sitenav
 
           a.logo
                position: absolute
-               top: 10px
+               top: 15px
                left: 50%
                transform: translateX(-50%)
                cursor: pointer
                h1
                     margin: 0
-                    font-size: 28px
-                    color: var(--color)
+                    font-size: 20px
+                    color: $color
 
      #nav-dropdown-user
           position: absolute
           transform: translate(-12px, 15px)
           width: 230px
           background: #fff
-          border: 3px solid #ecebec
+          border: 3px solid $border
           margin: 0
           list-style-type: none
           padding: 0
@@ -193,13 +197,13 @@ nav#sitenav
                &.hr
                     height: 1px
                     margin: 15px 0
-                    background: #ecebec
+                    background: $border
                &.about
                     height: 90px
                     display: flex
                     flex-direction: column
                     justify-content: center
-                    border-bottom: 1px solid #ecebec
+                    border-bottom: 1px solid $border
                     margin-bottom: 15px
                     h1, h2
                          margin: 0
@@ -226,22 +230,24 @@ nav#sitenav
      z-index: 10000
      width: 100%
      &.mobile.top
-          position: absolute
+          position: fixed
+          width: 100%
           top: 0
           left: 0
-          border-bottom: 3px solid #ecebec
+          border-bottom: 3px solid $border
+
           #searchbox-mobile
                position: absolute
                top: 0
                left: 0
                width: 100%
                display: none
-               background: var(--color-rgba-09)
+               background: rgba($color, 0.95)
                height: 50px
                z-index: 100
                #searchresults-mobile
                     background: #fff
-                    border: 3px solid #ecebec
+                    border: 3px solid $border
                     max-height: calc(100vh - 50px)
                     overflow: scroll
                     // display: none
@@ -274,7 +280,6 @@ nav#sitenav
                                         font-size: 24px
                                         font-weight: 300
                                    .info
-                                        // background: pink
                                         display: grid
                                         grid-template-columns: repeat(2, 1fr)
                                         grid-gap: 15px
@@ -304,7 +309,7 @@ nav#sitenav
                          input
                               height: 45px
                               margin: 0
-                              background: #ecebec
+                              background: $border
                               border: none
                               box-sizing: border-box
                               padding: 0 5px
@@ -319,7 +324,7 @@ nav#sitenav
                               outline: none
                               height: 45px
                               margin: 0
-                              background: #ecebec
+                              background: $border
                               border: none
                               box-sizing: border-box
                               padding: 0 5px
@@ -329,6 +334,7 @@ nav#sitenav
                               +tran
                               &:hover
                                    cursor: pointer
+
                     #searchboxclose-mobile
                          outline: none
                          height: 32px
@@ -364,13 +370,16 @@ nav#sitenav
 
                .logo
                     position: absolute
-                    top: 10px
+                    top: 15px
                     left: 50%
                     transform: translateX(-50%)
                     h1
                          margin: 0
-                         font-size: 28px
-                         color: var(--color)
+                         font-size: 20px
+                         color: $color
+                         @media screen and (max-width: 365px)
+                              font-size: 18px
+
 
                button#toogleMobileNewPost
                     font-size: 28px
@@ -388,7 +397,7 @@ nav#sitenav
                z-index: 10000
                header
                     height: 60px
-                    border-bottom: 3px solid #ecebec
+                    border-bottom: 3px solid $border
                     display: flex
                     justify-content: space-between
                     align-items: center
@@ -422,7 +431,7 @@ nav#sitenav
                     textarea
                          outline: none
                          border: 1px solid rgba(0, 0, 0, 0)
-                         border-bottom: 1px solid #ecebec
+                         border-bottom: 1px solid $border
                          background: #fff
                          box-sizing: border-box
                          padding: 5px
@@ -432,7 +441,7 @@ nav#sitenav
                          height: 200px
                          +tran
                          &:focus
-                              border-bottom: 1px solid var(--color)
+                              border-bottom: 1px solid $color
 
                     input
                          outline: none
@@ -448,10 +457,12 @@ nav#sitenav
                               margin-right: 5px
 
      &.mobile.bottom
-          position: absolute
-          bottom: 0
+          position: fixed
+          top: calc(100% - 51px)
+          bottom: 0px
           left: 0
-          border-top: 3px solid #ecebec
+          width: 100%
+          border-top: 3px solid $border
           .container
                display: flex
                justify-content: space-around
@@ -463,12 +474,12 @@ nav#sitenav
 nav#sitenav.mobile.left
      background: #fff
      z-index: 10000
-     height: calc(100vh - 50px)
-     position: absolute
+     height: 100vh
+     position: fixed
      top: 0
      left: -400px
      width: 290px
-     border-right: 3px solid #ecebec
+     border-right: 3px solid $border
      transition: 800ms all ease-in-out
      .container
           padding: 0
@@ -477,7 +488,7 @@ nav#sitenav.mobile.left
           justify-content: space-between
           align-items: center
           height: 53px
-          border-bottom: 3px solid #ecebec
+          border-bottom: 3px solid $border
           box-sizing: border-box
           padding: 0 10px
           a > img
@@ -488,11 +499,12 @@ nav#sitenav.mobile.left
                font-size: 19px
                border: none
                background: none
+               outline: none
 
      .info
           box-sizing: border-box
           padding: 10px
-          border-bottom: 1px solid var(--bordercolor)
+          border-bottom: 1px solid $border
           h1, h2
                margin: 0
           h1

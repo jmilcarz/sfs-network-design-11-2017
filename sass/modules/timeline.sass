@@ -2,14 +2,14 @@
      display: grid
      grid-template-columns: 280px 1fr 280px
      grid-gap: 20px
-     background: #fff
      @media screen and (max-width: 1206px)
-          grid-template-columns: 280px 1fr 0px
+          grid-template-columns: 280px 1fr 130px
      @media screen and (max-width: 870px)
           grid-template-columns: 1fr
+          grid-gap: 0px
      .column
           min-height: 50px
-          background: #f9f9f9
+          background: #fff
 
      .other.column
           @media screen and (max-width: 870px)
@@ -17,6 +17,11 @@
 
 
      .info.column
+          position: fixed
+          width: 280px
+          top: 55px
+          height: calc(100vh - 55px)
+          overflow: scroll
           @media screen and (max-width: 870px)
                display: none
           .about
@@ -26,7 +31,7 @@
                          display: block
                          height: 105px
                          width: 100%
-                         border-bottom: 2px solid var(--bordercolor)
+                         border-bottom: 2px solid $border
                          object-fit: cover
                     img.profile-img
                          height: 80px
@@ -35,13 +40,13 @@
                          display: block
                          margin: 0 auto
                          transform: translateY(-40px)
-                         border: 2px solid var(--bordercolor)
+                         border: 2px solid $border
                          object-fit: cover
 
                .box
                     margin-top: -35px
                     padding-bottom: 10px
-                    border-bottom: 1px solid var(--bordercolor)
+                    border-bottom: 1px solid $border
                     h1
                          margin: 0
                          text-align: center
@@ -72,7 +77,7 @@
                          font-size: 17px
                          a
                               font-weight: 400
-                              color: var(--color)
+                              color: $color
 
                          .grid
                               display: grid
@@ -83,7 +88,7 @@
                                    height: 50px
                                    object-fit: cover
                                    border-radius: 50%
-                                   border: 2px solid var(--bordercolor)
+                                   border: 2px solid $border
 
                               .info
                                    h1
@@ -99,8 +104,7 @@
 
 
 .post.column
-     @media screen and (max-width: 735px)
-          margin-top: 60px
+     grid-column: 2/3
      > header
           @media screen and (max-width: 735px)
                display: none
@@ -115,7 +119,7 @@
                line-height: 40px
                font-size: 17px
                width: 100%
-               border-bottom: 1px solid var(--bordercolor)
+               border-bottom: 1px solid $border
           .modal.new-post
                display: none
                position: absolute
@@ -127,14 +131,14 @@
                background: #fff
                padding: 0
                box-shadow: 0px 0px 30px #c9c8c8
-               border: 3px solid var(--bordercolor)
+               border: 3px solid $border
                border-radius: 3px
                header
                     display: flex
                     justify-content: space-between
                     align-items: center
                     height: 50px
-                    border-bottom: 3px solid var(--bordercolor)
+                    border-bottom: 3px solid $border
                     padding: 0 30px
                     h1
                          margin: 0
@@ -162,7 +166,7 @@
                     textarea, input, button
                          margin: 5px 0
                          outline: none
-                         border: 2px solid var(--bordercolor)
+                         border: 2px solid $border
                          background: #fff
                          padding: 5px
                          box-sizing: border-box
@@ -185,7 +189,7 @@
                          cursor: pointer
                          +tran
                          &:hover
-                              border-color: var(--color)
+                              border-color: $color
                          i
                               margin-right: 5px
 
@@ -197,14 +201,14 @@
                          max-height: 300px
                          +tran
                          &:focus
-                              border-color: var(--color)
+                              border-color: $color
 
      .posts
           box-sizing: border-box
           .post
                display: flex
                flex-direction: column
-               border-bottom: 2px solid var(--bordercolor)
+               border-bottom: 2px solid $border
                .row.info
                     display: flex
                     align-items: center
@@ -216,7 +220,7 @@
                          width: 57px
                          object-fit: cover
                          border-radius: 50%
-                         border: 1px solid var(--bordercolor)
+                         border: 1px solid $border
                     .about
                          box-sizing: border-box
                          padding-left: 10px
@@ -290,7 +294,7 @@
                               margin-right: 5px
                     .comments-modal
                          background: #fff
-                         border: 3px solid var(--bordercolor)
+                         border: 3px solid $border
                          max-width: 550px
                          width: 100%
                          display: none
@@ -303,7 +307,7 @@
                               justify-content: space-between
                               align-items: center
                               height: 50px
-                              border-bottom: 3px solid var(--bordercolor)
+                              border-bottom: 3px solid $border
                               box-sizing: border-box
                               padding: 0 15px
                               h1
@@ -331,7 +335,7 @@
                                    grid-gap: 10px
                                    box-sizing: border-box
                                    padding: 8px 15px
-                                   border-bottom: 1px solid var(--bordercolor)
+                                   border-bottom: 1px solid $border
                                    img
                                         width: 60px
                                         height: 60px
